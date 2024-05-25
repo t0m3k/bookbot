@@ -30,11 +30,10 @@ def letter_stats(text: str):
     return stats
 
 
-def sort_on(dict):
-    return dict["value"]
-
 
 def sort_dict(dict: dict):
+    def sort_on(dict):
+        return dict["value"]
     array = []
     for letter in dict.keys():
         array.append({"letter": letter, "value": dict[letter]})
